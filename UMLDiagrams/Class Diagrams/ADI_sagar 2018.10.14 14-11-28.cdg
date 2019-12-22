@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ADI_sagar">
+  <ClassDiagramComponents>
+    <Class name="ControllereventList" package="edu.softwarica.MeetingAttendence.Controller" visibility="public" xPosition="57.0" yPosition="20.0">
+      <Fields>
+        <Field name="con" type="Connection" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="package"/>
+      </Constructors>
+      <Methods>
+        <Method name="getUserSender" returnType="ArrayList&lt;Modelregister&gt;" visibility="public" isStatic="true">
+          <Argument type="String" name="sid"/>
+        </Method>
+        <Method name="getUserReceiever" returnType="ArrayList&lt;Modelregister&gt;" visibility="public" isStatic="true">
+          <Argument type="String" name="rid"/>
+        </Method>
+        <Method name="getUserEvent" returnType="ArrayList&lt;Modelmeetings&gt;" visibility="public" isStatic="true">
+          <Argument type="String" name="eid"/>
+        </Method>
+        <Method name="createEventList" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="ArrayList&lt;Modelregister&gt;" name="list1"/>
+          <Argument type="ArrayList&lt;Modelregister&gt;" name="list2"/>
+          <Argument type="ArrayList&lt;Modelmeetings&gt;" name="list3"/>
+        </Method>
+        <Method name="getInvitedListId" returnType="ArrayList&lt;Modelregister&gt;" visibility="public" isStatic="true">
+          <Argument type="String" name="rid"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Controllerlogins" package="edu.softwarica.MeetingAttendence.Controller" visibility="public" xPosition="29.0" yPosition="617.0">
+      <Fields>
+        <Field name="con" type="Connection" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="package"/>
+      </Constructors>
+      <Methods>
+        <Method name="login" returnType="ArrayList&lt;Modelregister&gt;" visibility="public" isStatic="true"/>
+      </Methods>
+    </Class>
+    <Class name="Controllermeetings" package="edu.softwarica.MeetingAttendence.Controller" visibility="public" xPosition="1203.0" yPosition="20.0">
+      <Fields>
+        <Field name="con" type="Connection" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="package"/>
+      </Constructors>
+      <Methods>
+        <Method name="registerEvent" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="Modelmeetings" name="ob"/>
+          <Argument type="String" name="uid"/>
+        </Method>
+        <Method name="getEvent" returnType="ArrayList&lt;Modelmeetings&gt;" visibility="public" isStatic="true">
+          <Argument type="String" name="userid"/>
+        </Method>
+        <Method name="deleteEvent" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="updateEvent" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="Modelmeetings" name="ob"/>
+          <Argument type="String" name="id1"/>
+        </Method>
+        <Method name="getEventUpdate" returnType="ArrayList&lt;Modelmeetings&gt;" visibility="public" isStatic="true">
+          <Argument type="String" name="userid"/>
+        </Method>
+        <Method name="getEventCountForShowEvent" returnType="int" visibility="public" isStatic="true">
+          <Argument type="String" name="eventid"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Controllernotification" package="edu.softwarica.MeetingAttendence.Controller" visibility="public" xPosition="1573.0" yPosition="1260.0">
+      <Fields>
+        <Field name="con" type="Connection" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="package"/>
+      </Constructors>
+      <Methods>
+        <Method name="getNotification" returnType="ArrayList&lt;Modelnotification&gt;" visibility="public" isStatic="true">
+          <Argument type="String" name="sid"/>
+        </Method>
+        <Method name="notificationStatusUpdate" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="sid"/>
+          <Argument type="String" name="eid"/>
+          <Argument type="String" name="uid"/>
+        </Method>
+        <Method name="count" returnType="int" visibility="public" isStatic="true">
+          <Argument type="String" name="eid"/>
+        </Method>
+        <Method name="showUser" returnType="ArrayList&lt;Modelnotification&gt;" visibility="public" isStatic="true">
+          <Argument type="String" name="eid"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Controllerregister" package="edu.softwarica.MeetingAttendence.Controller" visibility="public" xPosition="29.0" yPosition="277.0">
+      <Fields>
+        <Field name="con" type="Connection" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="package"/>
+      </Constructors>
+      <Methods>
+        <Method name="reisterUser" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="Modelregister" name="ob"/>
+        </Method>
+        <Method name="getUser" returnType="ArrayList&lt;Modelregister&gt;" visibility="public" isStatic="true"/>
+        <Method name="userStatusUpdate" returnType="void" visibility="public" isStatic="true">
+          <Argument type="int" name="i"/>
+          <Argument type="String" name="id"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ControllertimeSlot" package="edu.softwarica.MeetingAttendence.Controller" visibility="public" xPosition="589.0" yPosition="969.0">
+      <Fields>
+        <Field name="con" type="Connection" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="package"/>
+      </Constructors>
+      <Methods>
+        <Method name="createSlot" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="Modeltimeslot" name="ob"/>
+        </Method>
+        <Method name="getSlots" returnType="ArrayList&lt;Modeltimeslot&gt;" visibility="public" isStatic="true"/>
+        <Method name="updateSlot" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="code"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DBconnect" package="edu.softwarica.MeetingAttendence.Controller" visibility="public" xPosition="1606.0" yPosition="31.0">
+      <Fields>
+        <Field name="con" type="Connection" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getConnection" returnType="Connection" visibility="public" isStatic="true"/>
+        <Method name="connectDB" returnType="void" visibility="private" isStatic="true"/>
+      </Methods>
+    </Class>
+    <Class name="Modelmeetings" package="edu.softwarica.MeetingAttendence.Model" visibility="public" xPosition="868.0" yPosition="20.0">
+      <Fields>
+        <Field name="event_id" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getE_id" returnType="String" visibility="public"/>
+        <Method name="setE_id" returnType="void" visibility="public">
+          <Argument type="String" name="event_id"/>
+        </Method>
+        <Method name="getEname" returnType="String" visibility="public"/>
+        <Method name="setEname" returnType="void" visibility="public">
+          <Argument type="String" name="eventName"/>
+        </Method>
+        <Method name="getEdate" returnType="String" visibility="public"/>
+        <Method name="setEdate" returnType="void" visibility="public">
+          <Argument type="String" name="eventDate"/>
+        </Method>
+        <Method name="getEtime" returnType="String" visibility="public"/>
+        <Method name="setEtime" returnType="void" visibility="public">
+          <Argument type="String" name="eventTime"/>
+        </Method>
+        <Method name="getElocation" returnType="String" visibility="public"/>
+        <Method name="setElocation" returnType="void" visibility="public">
+          <Argument type="String" name="eventLocation"/>
+        </Method>
+        <Method name="getEdesc" returnType="String" visibility="public"/>
+        <Method name="setEdesc" returnType="void" visibility="public">
+          <Argument type="String" name="eventDescription"/>
+        </Method>
+        <Method name="getEminatt" returnType="String" visibility="public"/>
+        <Method name="setEminatt" returnType="void" visibility="public">
+          <Argument type="String" name="eventMinatt"/>
+        </Method>
+        <Method name="getEinvitatten" returnType="String" visibility="public"/>
+        <Method name="setEinvitatten" returnType="void" visibility="public">
+          <Argument type="String" name="eventInvitation"/>
+        </Method>
+        <Method name="getEthresmin" returnType="String" visibility="public"/>
+        <Method name="setEthresmin" returnType="void" visibility="public">
+          <Argument type="String" name="eventThresmin"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Modelnotification" package="edu.softwarica.MeetingAttendence.Model" visibility="public" xPosition="1180.0" yPosition="679.0">
+      <Fields>
+        <Field name="s_id" type="String" visibility="private"/>
+        <Field name="status" type="String" visibility="private"/>
+        <Field name="list_id" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getStatus" returnType="String" visibility="public"/>
+        <Method name="setStatus" returnType="void" visibility="public">
+          <Argument type="String" name="status"/>
+        </Method>
+        <Method name="getList_id" returnType="String" visibility="public"/>
+        <Method name="setList_id" returnType="void" visibility="public">
+          <Argument type="String" name="list_id"/>
+        </Method>
+        <Method name="getS_id" returnType="String" visibility="public"/>
+        <Method name="setS_id" returnType="void" visibility="public">
+          <Argument type="String" name="s_id"/>
+        </Method>
+        <Method name="getS_fname" returnType="String" visibility="public"/>
+        <Method name="setS_fname" returnType="void" visibility="public">
+          <Argument type="String" name="s_fname"/>
+        </Method>
+        <Method name="getS_lname" returnType="String" visibility="public"/>
+        <Method name="setS_lname" returnType="void" visibility="public">
+          <Argument type="String" name="s_lname"/>
+        </Method>
+        <Method name="getS_email" returnType="String" visibility="public"/>
+        <Method name="setS_email" returnType="void" visibility="public">
+          <Argument type="String" name="s_email"/>
+        </Method>
+        <Method name="getS_phone" returnType="String" visibility="public"/>
+        <Method name="setS_phone" returnType="void" visibility="public">
+          <Argument type="String" name="s_phone"/>
+        </Method>
+        <Method name="getR_id" returnType="String" visibility="public"/>
+        <Method name="setR_id" returnType="void" visibility="public">
+          <Argument type="String" name="r_id"/>
+        </Method>
+        <Method name="getR_fname" returnType="String" visibility="public"/>
+        <Method name="setR_fname" returnType="void" visibility="public">
+          <Argument type="String" name="r_fname"/>
+        </Method>
+        <Method name="getR_lname" returnType="String" visibility="public"/>
+        <Method name="setR_lname" returnType="void" visibility="public">
+          <Argument type="String" name="r_lname"/>
+        </Method>
+        <Method name="getR_email" returnType="String" visibility="public"/>
+        <Method name="setR_email" returnType="void" visibility="public">
+          <Argument type="String" name="r_email"/>
+        </Method>
+        <Method name="getR_phone" returnType="String" visibility="public"/>
+        <Method name="setR_phone" returnType="void" visibility="public">
+          <Argument type="String" name="r_phone"/>
+        </Method>
+        <Method name="getE_id" returnType="String" visibility="public"/>
+        <Method name="setE_id" returnType="void" visibility="public">
+          <Argument type="String" name="e_id"/>
+        </Method>
+        <Method name="getEname" returnType="String" visibility="public"/>
+        <Method name="setEname" returnType="void" visibility="public">
+          <Argument type="String" name="ename"/>
+        </Method>
+        <Method name="getEdate" returnType="String" visibility="public"/>
+        <Method name="setEdate" returnType="void" visibility="public">
+          <Argument type="String" name="edate"/>
+        </Method>
+        <Method name="getEtime" returnType="String" visibility="public"/>
+        <Method name="setEtime" returnType="void" visibility="public">
+          <Argument type="String" name="etime"/>
+        </Method>
+        <Method name="getElocation" returnType="String" visibility="public"/>
+        <Method name="setElocation" returnType="void" visibility="public">
+          <Argument type="String" name="elocation"/>
+        </Method>
+        <Method name="getEdesc" returnType="String" visibility="public"/>
+        <Method name="setEdesc" returnType="void" visibility="public">
+          <Argument type="String" name="edesc"/>
+        </Method>
+        <Method name="getEminatt" returnType="String" visibility="public"/>
+        <Method name="setEminatt" returnType="void" visibility="public">
+          <Argument type="String" name="eminatt"/>
+        </Method>
+        <Method name="getEinvitatten" returnType="String" visibility="public"/>
+        <Method name="setEinvitatten" returnType="void" visibility="public">
+          <Argument type="String" name="einvitatten"/>
+        </Method>
+        <Method name="getEthresmin" returnType="String" visibility="public"/>
+        <Method name="setEthresmin" returnType="void" visibility="public">
+          <Argument type="String" name="ethresmin"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Modelregister" package="edu.softwarica.MeetingAttendence.Model" visibility="public" xPosition="344.0" yPosition="294.0">
+      <Fields>
+        <Field name="fname" type="String" visibility="private"/>
+        <Field name="img1" type="byte[]" visibility="private"/>
+        <Field name="userid" type="String" visibility="private"/>
+        <Field name="status" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getUserid" returnType="String" visibility="public"/>
+        <Method name="setUserid" returnType="void" visibility="public">
+          <Argument type="String" name="userid"/>
+        </Method>
+        <Method name="getStatus" returnType="int" visibility="public"/>
+        <Method name="setStatus" returnType="void" visibility="public">
+          <Argument type="int" name="status"/>
+        </Method>
+        <Method name="getImg1" returnType="byte[]" visibility="public"/>
+        <Method name="setImg1" returnType="void" visibility="public">
+          <Argument type="byte[]" name="img1"/>
+        </Method>
+        <Method name="getFname" returnType="String" visibility="public"/>
+        <Method name="setFname" returnType="void" visibility="public">
+          <Argument type="String" name="fname"/>
+        </Method>
+        <Method name="getLname" returnType="String" visibility="public"/>
+        <Method name="setLname" returnType="void" visibility="public">
+          <Argument type="String" name="lname"/>
+        </Method>
+        <Method name="getEmail" returnType="String" visibility="public"/>
+        <Method name="setEmail" returnType="void" visibility="public">
+          <Argument type="String" name="email"/>
+        </Method>
+        <Method name="getPass" returnType="String" visibility="public"/>
+        <Method name="setPass" returnType="void" visibility="public">
+          <Argument type="String" name="pass"/>
+        </Method>
+        <Method name="getAddress" returnType="String" visibility="public"/>
+        <Method name="setAddress" returnType="void" visibility="public">
+          <Argument type="String" name="address"/>
+        </Method>
+        <Method name="getGender" returnType="String" visibility="public"/>
+        <Method name="setGender" returnType="void" visibility="public">
+          <Argument type="String" name="gender"/>
+        </Method>
+        <Method name="getPhone" returnType="String" visibility="public"/>
+        <Method name="setPhone" returnType="void" visibility="public">
+          <Argument type="String" name="phone"/>
+        </Method>
+        <Method name="getAvtime" returnType="String" visibility="public"/>
+        <Method name="setAvtime" returnType="void" visibility="public">
+          <Argument type="String" name="avtime"/>
+        </Method>
+        <Method name="getUnavtime" returnType="String" visibility="public"/>
+        <Method name="setUnavtime" returnType="void" visibility="public">
+          <Argument type="String" name="unavtime"/>
+        </Method>
+        <Method name="getImg" returnType="String" visibility="public"/>
+        <Method name="setImg" returnType="void" visibility="public">
+          <Argument type="String" name="img"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Modeltimeslot" package="edu.softwarica.MeetingAttendence.Model" visibility="public" xPosition="608.0" yPosition="277.0">
+      <Fields>
+        <Field name="id" type="String" visibility="private"/>
+        <Field name="status1" type="int" visibility="private"/>
+        <Field name="ename" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getId" returnType="String" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="String" name="id"/>
+        </Method>
+        <Method name="getSlot1" returnType="String" visibility="public"/>
+        <Method name="setSlot1" returnType="void" visibility="public">
+          <Argument type="String" name="slot1"/>
+        </Method>
+        <Method name="getSlot2" returnType="String" visibility="public"/>
+        <Method name="setSlot2" returnType="void" visibility="public">
+          <Argument type="String" name="slot2"/>
+        </Method>
+        <Method name="getSlot3" returnType="String" visibility="public"/>
+        <Method name="setSlot3" returnType="void" visibility="public">
+          <Argument type="String" name="slot3"/>
+        </Method>
+        <Method name="getSlot4" returnType="String" visibility="public"/>
+        <Method name="setSlot4" returnType="void" visibility="public">
+          <Argument type="String" name="slot4"/>
+        </Method>
+        <Method name="getSlot5" returnType="String" visibility="public"/>
+        <Method name="setSlot5" returnType="void" visibility="public">
+          <Argument type="String" name="slot5"/>
+        </Method>
+        <Method name="getStatus1" returnType="int" visibility="public"/>
+        <Method name="setStatus1" returnType="void" visibility="public">
+          <Argument type="int" name="status1"/>
+        </Method>
+        <Method name="getStatus2" returnType="int" visibility="public"/>
+        <Method name="setStatus2" returnType="void" visibility="public">
+          <Argument type="int" name="status2"/>
+        </Method>
+        <Method name="getStatus3" returnType="int" visibility="public"/>
+        <Method name="setStatus3" returnType="void" visibility="public">
+          <Argument type="int" name="status3"/>
+        </Method>
+        <Method name="getStatus4" returnType="int" visibility="public"/>
+        <Method name="setStatus4" returnType="void" visibility="public">
+          <Argument type="int" name="status4"/>
+        </Method>
+        <Method name="getStatus5" returnType="int" visibility="public"/>
+        <Method name="setStatus5" returnType="void" visibility="public">
+          <Argument type="int" name="status5"/>
+        </Method>
+        <Method name="getUserid" returnType="int" visibility="public"/>
+        <Method name="setUserid" returnType="void" visibility="public">
+          <Argument type="int" name="userid"/>
+        </Method>
+        <Method name="getEname" returnType="String" visibility="public"/>
+        <Method name="setEname" returnType="void" visibility="public">
+          <Argument type="String" name="ename"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="createmeetings" package="edu.softwarica.MeetingAttendence.View" visibility="public" xPosition="882.0" yPosition="716.0">
+      <Fields>
+        <Field name="frame" type="JFrame" visibility="private"/>
+        <Field name="eventName" type="JTextField" visibility="private"/>
+        <Field name="eventDate" type="JTextField" visibility="private"/>
+        <Field name="eventTime" type="JTextField" visibility="private"/>
+        <Field name="EventLocation" type="JTextField" visibility="private"/>
+        <Field name="MinAtt" type="JTextField" visibility="private"/>
+        <Field name="InvitedAtt" type="JTextField" visibility="private"/>
+        <Field name="PerOfInvAtt" type="JTextField" visibility="private"/>
+        <Field name="textArea" type="JTextArea" visibility="private"/>
+        <Field name="btnEventDate" type="JButton" visibility="private"/>
+        <Field name="btnEventTime" type="JButton" visibility="private"/>
+        <Field name="btnCreate" type="JButton" visibility="package"/>
+        <Field name="count" type="int" visibility="package"/>
+        <Field name="uid" type="String" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="uid"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="e"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="createtimeslots" package="edu.softwarica.MeetingAttendence.View" visibility="public" xPosition="1837.0" yPosition="941.0">
+      <Fields>
+        <Field name="txt" type="JTextField" visibility="private" isFinal="true"/>
+        <Field name="lblEventName" type="JLabel" visibility="private" isFinal="true"/>
+        <Field name="userid" type="String" visibility="private" isFinal="true"/>
+        <Field name="btnCreate" type="JButton" visibility="private" isFinal="true"/>
+        <Field name="cnt" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="userid"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="e"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="dashboards" package="edu.softwarica.MeetingAttendence.View" visibility="public" xPosition="1203.0" yPosition="294.0">
+      <Fields>
+        <Field name="frame" type="JFrame" visibility="private"/>
+        <Field name="btnCreateEvent" type="JButton" visibility="package"/>
+        <Field name="btnAllCreatedEvent" type="JButton" visibility="package"/>
+        <Field name="userid" type="JLabel" visibility="package"/>
+        <Field name="btnSeeEvent" type="JButton" visibility="package"/>
+        <Field name="btnCreateTimeSlot" type="JButton" visibility="package"/>
+        <Field name="btnVote" type="JButton" visibility="package"/>
+        <Field name="btnBestTimeSlot" type="JButton" visibility="package"/>
+        <Field name="ft" type="Font" visibility="package"/>
+        <Field name="font" type="Font" visibility="package"/>
+        <Field name="btnRefresh" type="JButton" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="fname"/>
+          <Argument type="String" name="lname"/>
+          <Argument type="String" name="email"/>
+          <Argument type="String" name="address"/>
+          <Argument type="String" name="phone"/>
+          <Argument type="String" name="gender"/>
+          <Argument type="String" name="availableTime"/>
+          <Argument type="String" name="unavailableTime"/>
+          <Argument type="byte[]" name="img"/>
+          <Argument type="String" name="uid"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="private">
+          <Argument type="String" name="fname"/>
+          <Argument type="String" name="lname"/>
+          <Argument type="String" name="email"/>
+          <Argument type="String" name="address"/>
+          <Argument type="String" name="phone"/>
+          <Argument type="String" name="gender"/>
+          <Argument type="String" name="availableTime"/>
+          <Argument type="String" name="unavailableTime"/>
+          <Argument type="byte[]" name="img"/>
+          <Argument type="String" name="uid"/>
+        </Method>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="e"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="invitations" package="edu.softwarica.MeetingAttendence.View" visibility="public" xPosition="1520.0" yPosition="960.0">
+      <Fields>
+        <Field name="id" type="JLabel" visibility="package"/>
+        <Field name="invite" type="JButton" visibility="package"/>
+        <Field name="frame" type="JFrame" visibility="package"/>
+        <Field name="e_id" type="String" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="inviteFriend" returnType="void" visibility="public">
+          <Argument type="String" name="e_id"/>
+          <Argument type="String" name="u_id"/>
+        </Method>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="e"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="login" package="edu.softwarica.MeetingAttendence.View" visibility="public" xPosition="1895.0" yPosition="20.0">
+      <Fields>
+        <Field name="textEmail" type="JTextField" visibility="private"/>
+        <Field name="passwordField" type="JPasswordField" visibility="private"/>
+        <Field name="btnSignup" type="JButton" visibility="package"/>
+        <Field name="btnLogin" type="JButton" visibility="package"/>
+        <Field name="font" type="Font" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="e"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="meetingsnotification" package="edu.softwarica.MeetingAttendence.View" visibility="public" xPosition="592.0" yPosition="1222.0">
+      <Fields>
+        <Field name="container" type="Container" visibility="package"/>
+        <Field name="panel" type="JPanel" visibility="package"/>
+        <Field name="scrollPane" type="JScrollPane" visibility="package"/>
+        <Field name="id" type="JLabel" visibility="package"/>
+        <Field name="update" type="JButton" visibility="package"/>
+        <Field name="userid" type="String" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="userid"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="e"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="registration" package="edu.softwarica.MeetingAttendence.View" visibility="public" xPosition="38.0" yPosition="853.0">
+      <Fields>
+        <Field name="serialVersionUID" type="long" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="frame" type="JFrame" visibility="public"/>
+        <Field name="firstname" type="JTextField" visibility="private"/>
+        <Field name="lastname" type="JTextField" visibility="private"/>
+        <Field name="email" type="JTextField" visibility="private"/>
+        <Field name="address" type="JTextField" visibility="private"/>
+        <Field name="phone" type="JTextField" visibility="private"/>
+        <Field name="password" type="JPasswordField" visibility="private"/>
+        <Field name="availableTime" type="JTextField" visibility="private"/>
+        <Field name="unavailableTime" type="JTextField" visibility="private"/>
+        <Field name="rdbtnFemale" type="JRadioButton" visibility="package"/>
+        <Field name="filepath" type="String" visibility="package"/>
+        <Field name="btnAvDay" type="JButton" visibility="package"/>
+        <Field name="btnUnavDay" type="JButton" visibility="package"/>
+        <Field name="btnImage" type="JButton" visibility="package"/>
+        <Field name="btnAvTime" type="JButton" visibility="package"/>
+        <Field name="btnUnavTime" type="JButton" visibility="package"/>
+        <Field name="btnRegister" type="JButton" visibility="package"/>
+        <Field name="btnReset" type="JButton" visibility="package"/>
+        <Field name="btnExit" type="JButton" visibility="package"/>
+        <Field name="label" type="JLabel" visibility="package"/>
+        <Field name="font" type="Font" visibility="package"/>
+        <Field name="count" type="int" visibility="package"/>
+        <Field name="lblDay" type="JLabel" visibility="private"/>
+        <Field name="lblTim" type="JLabel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="private"/>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="e"/>
+        </Method>
+        <Method name="getDataCheck" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="timeslotdates" package="edu.softwarica.MeetingAttendence.View" visibility="public" xPosition="316.0" yPosition="1085.0">
+      <Fields>
+        <Field name="month" type="int" visibility="package"/>
+        <Field name="year" type="int" visibility="package"/>
+        <Field name="l" type="JLabel" visibility="package"/>
+        <Field name="day" type="String" visibility="package"/>
+        <Field name="dialog" type="JDialog" visibility="package"/>
+        <Field name="button" type="JButton[]" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="JFrame" name="parent"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="displayDate" returnType="void" visibility="public"/>
+        <Method name="setPickedDate" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Picker" package="edu.softwarica.MeetingAttendence.View" visibility="public" xPosition="882.0" yPosition="534.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="updatemeetings" package="edu.softwarica.MeetingAttendence.View" visibility="public" xPosition="882.0" yPosition="1119.0">
+      <Fields>
+        <Field name="eventName" type="JTextField" visibility="private" isFinal="true"/>
+        <Field name="eventDate" type="JTextField" visibility="private" isFinal="true"/>
+        <Field name="eventTime" type="JTextField" visibility="private" isFinal="true"/>
+        <Field name="EventLocation" type="JTextField" visibility="private" isFinal="true"/>
+        <Field name="MinAtt" type="JTextField" visibility="private" isFinal="true"/>
+        <Field name="InvitedAtt" type="JTextField" visibility="private" isFinal="true"/>
+        <Field name="PerOfInvAtt" type="JTextField" visibility="private" isFinal="true"/>
+        <Field name="textArea" type="JTextArea" visibility="private" isFinal="true"/>
+        <Field name="btnEventDate" type="JButton" visibility="private" isFinal="true"/>
+        <Field name="btnEventTime" type="JButton" visibility="private" isFinal="true"/>
+        <Field name="btnUpdate" type="JButton" visibility="package"/>
+        <Field name="count" type="int" visibility="package"/>
+        <Field name="eid" type="String" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="uid"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="e"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="viewmeetings" package="edu.softwarica.MeetingAttendence.View" visibility="public" xPosition="1456.0" yPosition="687.0">
+      <Fields>
+        <Field name="id" type="JLabel" visibility="package"/>
+        <Field name="btnUpdate" type="JButton[]" visibility="package"/>
+        <Field name="scroll" type="JScrollPane" visibility="package"/>
+        <Field name="mainPanel" type="JPanel" visibility="package"/>
+        <Field name="userid" type="String" visibility="package"/>
+        <Field name="font" type="Font" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="userid"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="e"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="viewuser" package="edu.softwarica.MeetingAttendence.View" visibility="public" xPosition="1715.0" yPosition="687.0">
+      <Fields>
+        <Field name="contentPane" type="Container" visibility="package"/>
+        <Field name="scroll" type="JScrollPane" visibility="package"/>
+        <Field name="mainPanel" type="JPanel" visibility="package"/>
+        <Field name="eventId" type="String" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="inviteFriend" returnType="void" visibility="public">
+          <Argument type="String" name="eventId"/>
+          <Argument type="String" name="userId"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="edu.softwarica.MeetingAttendence.Controller.ControllereventList" target="edu.softwarica.MeetingAttendence.Model.Modelmeetings" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="edu.softwarica.MeetingAttendence.Controller.Controllerregister" target="edu.softwarica.MeetingAttendence.Model.Modelregister" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="edu.softwarica.MeetingAttendence.Controller.Controllermeetings" target="edu.softwarica.MeetingAttendence.Model.Modelmeetings" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="edu.softwarica.MeetingAttendence.Controller.ControllereventList" target="edu.softwarica.MeetingAttendence.Model.Modelregister" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="edu.softwarica.MeetingAttendence.Controller.ControllertimeSlot" target="edu.softwarica.MeetingAttendence.Model.Modeltimeslot" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="edu.softwarica.MeetingAttendence.Controller.Controllerlogins" target="edu.softwarica.MeetingAttendence.Model.Modelregister" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="edu.softwarica.MeetingAttendence.Controller.Controllernotification" target="edu.softwarica.MeetingAttendence.Model.Modelnotification" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
